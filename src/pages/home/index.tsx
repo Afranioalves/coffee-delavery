@@ -1,11 +1,15 @@
+import Menu from "../../components/menu";
 
 const Home = ()=>{
 
     return(
         <>
-            <div>
+            <main>
+                <header>
+                    <Menu />
+                </header>
                 <h1>This is Home Page</h1>
-            </div>
+            </main>
         </>
     )
 }
