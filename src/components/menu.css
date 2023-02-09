@@ -1,0 +1,46 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 104px;
+    
+}
+.logo{
+    width: 80px;
+    height: 40px;
+}
+.section-2{
+    display: flex;
+    align-items: center;
+}
+.btn-go-to-cart{
+    background-color:#F1E9C9;
+    border: none;
+    height: 38px;
+    width: 38px;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    color:#C47F17;
+    cursor: pointer;
+}
+.box-address{
+    margin-right: 12px;
+    background-color:#EBE5F9;
+    height: 38px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+.box-address p i{
+    margin-right: 8px;
+    font-size: 18px;
+    color:#8047F8;
+}
+.box-address p {
+    display: flex;
+    color: #4B2995;
+    font-family: Roboto-Regular;
+    font-size: 14px;
+}
