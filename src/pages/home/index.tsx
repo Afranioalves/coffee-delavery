@@ -4,21 +4,31 @@ import Article from "../../components/article";
 import './index.css'
 import products from "../../data/_products";
 import { useState } from "react";
+import { search } from "../../data/search";
 
 const Home = ()=>{
 
     const [cart, setCart] = useState<any>({ productsInCart:[] })
 
+    const handleClick = (id: number, amount: number) => {
+        const product = search(id)
+        setCart({
+            productsInCart: { ...product, amount }
+        })
+    }
+
     const productsRender = () =>{
         return products.map((coffee)=>{
             return(
                 <Article
-                    key={coffee.id} 
+                    key={coffee.id}
+                    id={coffee.id}
                     name = {coffee.name}
                     description = {coffee.description}
                     price = {coffee.price}
                     type = {coffee.type}
                     image ={coffee.image}
+                    handleClick={handleClick}
                 />
             )
         })
