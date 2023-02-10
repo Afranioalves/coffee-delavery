@@ -1,0 +1,27 @@
+
+.detail-info span{
+    display: flex;
+}
+.detail-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 40px;
+   
+}
+
+.detail-info span:first-child{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color:#fff;
+    margin-right: 12px;
+}
+
+.detail-info span:last-child{
+    font-family: Roboto-Regular;
+    color:var(--color-subtitle);
+}
