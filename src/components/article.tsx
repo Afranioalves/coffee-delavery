@@ -12,7 +12,7 @@ const Article = (props:PropsArticles) =>{
 
     const typeRender = ()=>{
         return(
-            props.type.map((type:any, index:number)=>{
+            props.type.map((type:string, index:number)=>{
                 return(
                     <span key={index}>{type}</span>
                 )
