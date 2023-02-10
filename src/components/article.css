@@ -1,6 +1,133 @@
 .article{
-    width: 256px;
-    height: 310px;
+    width: 260px;
+    height: 315px;
     background-color: #F3F2F2;
     border-radius: 6px 36px;
+    position: relative;
+}
+.box-coffee-image{
+   display: flex;
+   justify-content: center;
+}
+.coffee-image{
+    margin-top: -20px;
+    width: 120px;
+    height: 120px;
+}
+.box-types{
+   margin-top: 12px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 16px;
+   
+}
+
+.box-types span{
+    background:#F1E9C9;
+    font-family: Roboto-Regular;
+    color: #C47F17;
+    font-size: 11px;
+    display: flex;
+    padding: 6px 12px;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 700;
+    border-radius: 50px;
+    margin-right: 6px;
+}
+
+.coffee-name{
+    text-align: center;
+    font-family: Baloo-2;
+    font-weight: 700;
+    color:var(--color-subtitle);
+    font-size: 20px;
+}
+.coffee-description{
+    text-align: center;
+    font-family: Roboto-Regular;
+    color: #8D8686;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 8px;
+}
+.box-option{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.options{
+    display: flex;
+   
+}
+.box-amout{
+    display: flex;
+    justify-content: space-between;
+    background: #E6E5E5;
+    border-radius: 6px;
+   /* width: 72px;*/
+    height: 38px;
+    padding: 0 2px;
+}
+.box-amout button{
+    width: 25px;
+    height: 38px;
+    border: none;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#8047F8;
+    font-family: Roboto-Regular;
+    background: transparent;
+    cursor: pointer;
+}
+.input-amount{
+    width: 25px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Roboto-Regular;
+    color: #272221;
+    padding: 0 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+}
+.btn-add-to-cart{
+    width: 38px;
+    height: 38px;
+    border: none;
+    background: #4B2995;
+    border-radius: 6px;
+    color:#fff;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+}
+.currency{
+    margin-right: 4px;
+    font-family: Roboto-Regular;
+    color: #574F4D;
+    font-size: 14px;
+}
+.price{
+    font-weight: 800;
+    font-size: 24px;
+    font-family: Baloo-2;
+    font-weight: 800;
+    color: #574F4D;
 }
