@@ -9,6 +9,7 @@ const App = ()=>{
     <BrowserRouter>
         <Routes>
             <Route index element={<Pages.Home/>}></Route>
+            <Route path="checkout" element={<Pages.Checkout/>}></Route>
         </Routes>
     </BrowserRouter>
   )

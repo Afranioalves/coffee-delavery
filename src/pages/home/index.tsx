@@ -2,9 +2,24 @@ import Menu from "../../components/menu";
 import Detail from "../../components/detail";
 import Article from "../../components/article";
 import './index.css'
+import products from "../../data/_products";
 
 const Home = ()=>{
 
+    const productsRender = () =>{
+        return products.map((coffee)=>{
+            return(
+                <Article
+                    key={coffee.id} 
+                    name = {coffee.name}
+                    description = {coffee.description}
+                    price = {coffee.price}
+                    type = {coffee.type}
+                    image ={coffee.image}
+                />
+            )
+        })
+    }
     return(
         <>
             <main>
@@ -57,7 +72,7 @@ const Home = ()=>{
                     <h1>Nossos cafés</h1>
 
                     <div className="box-articles">
-                        <Article />
+                       {productsRender()}
                     </div>
                 </section>
 

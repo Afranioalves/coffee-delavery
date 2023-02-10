@@ -62,4 +62,7 @@
 .box-articles{
     margin-top: 56px;
     padding-bottom: 64px;
+    display: grid;
+    grid-template-columns: 256px 256px 256px 256px;
+    column-gap: 32px;
 }

@@ -5,12 +5,30 @@
 }
 :root {
   --base-background:#fafafa;
+  --padding-left: 160px;
+  --padding-right: 160px;
+  --color-title:#272221;
+  --color-subtitle:#403937;
  
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url('./assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: Baloo-2;
+  src: url('./assets/fonts/Baloo_2/Baloo2-VariableFont_wght.ttf');
 }
 
 html, 
 body{
   height: 100%;
+}
+
+img{
+  max-width: 100%;
 }
 
 body {

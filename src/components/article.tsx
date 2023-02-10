@@ -1,17 +1,38 @@
 import './article.css'
-const Article = () =>{
+
+interface PropsArticles{
+    image:string,
+    name:string,
+    description:string,
+    price:number,
+    type:Array<string>
+}
+
+const Article = (props:PropsArticles) =>{
+
+    const typeRender = ()=>{
+        return(
+            props.type.map((type:any, index:number)=>{
+                return(
+                    <span key={index}>{type}</span>
+                )
+                
+            })
+        )
+
+    }
 
     return(
         <>
             <article className='article'>
                 <div className='box-coffee-image'>
-                    <img src="/images/Coffee/Coffee-1.svg" alt="image-cup-of-coffe" className="coffee-image" />
+                    <img src={props.image} alt="image-cup-of-coffe" className="coffee-image" />
                 </div>
                 <div className='box-types'>
-                    <span>TRADICIONAL</span>
+                   {typeRender()}
                 </div>
-                <p className='coffee-name'>Expresso Tradicional</p>
-                <p className='coffee-description'>O tradicional café feito com água <br /> quente e grãos moídos</p>
+                <p className='coffee-name'>{props.name}</p>
+                <p className='coffee-description'>{props.description}</p>
 
                 <div className='box-option'>
                     <p>
@@ -21,7 +42,7 @@ const Article = () =>{
                     <div className='options'>
                         <div className="box-amout">
                             <button>-</button>
-                            <input type="number" name='amount' className='input-amount' min={1} readOnly={true}/>
+                            <input type="number" name='amount' className='input-amount' min={1} readOnly={true} value={1}/>
                             <button>+</button>
                         </div>
 
