@@ -1,5 +1,6 @@
 import Menu from "../../components/menu";
 import Detail from "../../components/detail";
+import Article from "../../components/article";
 import './index.css'
 
 const Home = ()=>{
@@ -54,9 +55,9 @@ const Home = ()=>{
 
                 <section className="section-articles">
                     <h1>Nossos cafés</h1>
-                    
-                    <div className="box-articles">
 
+                    <div className="box-articles">
+                        <Article />
                     </div>
                 </section>
 
