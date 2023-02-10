@@ -3,8 +3,11 @@ import Detail from "../../components/detail";
 import Article from "../../components/article";
 import './index.css'
 import products from "../../data/_products";
+import { useState } from "react";
 
 const Home = ()=>{
+
+    const [cart, setCart] = useState<any>({ productsInCart:[] })
 
     const productsRender = () =>{
         return products.map((coffee)=>{
