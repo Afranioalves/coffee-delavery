@@ -4,17 +4,17 @@ import Article from "../../components/article";
 import './index.css'
 import products from "../../data/_products";
 import { useState } from "react";
-import { search } from "../../data/search";
+import { search } from "../../services/_searchProduct";
+import Coffee from "../../data/_products";
 
 const Home = ()=>{
 
-    const [cart, setCart] = useState<any>({ productsInCart:[] })
+    const [cart, setCart] = useState<any>([])
 
     const handleClick = (id: number, amount: number) => {
-        const product = search(id)
-        setCart({
-            productsInCart: { ...product, amount }
-        })
+        const product = search(id, Coffee)
+        const searchItemInCart =  search(id, cart)
+        searchItemInCart == undefined ? setCart(cart.concat({...product, amount})): alert('product already exist in cart...')
     }
 
     const productsRender = () =>{
