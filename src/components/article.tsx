@@ -7,20 +7,18 @@ interface PropsArticles{
     name:string,
     description:string,
     price:number,
-    type:Array<string>
+    type:Array<string>,
     handleClick: (id: number, amount: number) => any
 }
 
 const Article = (props:PropsArticles) =>{
-    const { id, handleClick } = props
+    const { id, handleClick, name, image, description, price, type } = props
     const [ amount, setAmount ] = useState(1)
-    const handleChange = (val: number) => {
-        setAmount(amount + val)
-    }
+    const handleChange = (val: number) => {setAmount(amount + val)}
 
     const typeRender = ()=>{
         return(
-            props.type.map((type:string, index:number)=>{
+            type.map((type:string, index:number)=>{
                 return(
                     <span key={index}>{type}</span>
                 )
@@ -34,18 +32,18 @@ const Article = (props:PropsArticles) =>{
         <>
             <article className='article'>
                 <div className='box-coffee-image'>
-                    <img src={props.image} alt="image-cup-of-coffe" className="coffee-image" />
+                    <img src={image} alt="image-cup-of-coffe" className="coffee-image" />
                 </div>
                 <div className='box-types'>
                    {typeRender()}
                 </div>
-                <p className='coffee-name'>{props.name}</p>
-                <p className='coffee-description'>{props.description}</p>
+                <p className='coffee-name'>{name}</p>
+                <p className='coffee-description'>{description}</p>
 
                 <div className='box-option'>
                     <p>
                         <span className='currency'>R$</span> 
-                        <span className='price'>9,90</span>
+                        <span className='price'>{price}</span>
                     </p>
                     <div className='options'>
                         <div className="box-amout">
