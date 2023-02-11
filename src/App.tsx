@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Pages from './pages'
+import { Provider } from './context/cartContext'
 
 
 const App = ()=>{
@@ -16,4 +16,4 @@ const App = ()=>{
 
 
 }
-export default App
+export default ()=> <Provider><App /></Provider>
