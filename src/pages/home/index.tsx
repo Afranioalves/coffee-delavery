@@ -3,19 +3,32 @@ import Detail from "../../components/detail";
 import Article from "../../components/article";
 import './index.css'
 import products from "../../data/_products";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { search } from "../../services/_searchProduct";
 import Coffee from "../../data/_products";
+import { Context } from "../../context/cartContext";
+import { cartContextType } from "../../context/types";
 
 const Home = ()=>{
 
-    const [cart, setCart] = useState<any>([])
+    const {cartContext, setCartContext} = useContext(Context) as cartContextType
+    
+    const handleAddItemInCart = (id: number, amount: number) => {
 
-    const handleClick = (id: number, amount: number) => {
         const product = search(id, Coffee)
-        const searchItemInCart =  search(id, cart)
-        searchItemInCart == undefined ? setCart(cart.concat({...product, amount})): alert('product already exist in cart...')
+        const searchItemInCart =  search(id, cartContext)
+        switch(searchItemInCart){
+            case undefined:
+                setCartContext(cartContext.concat({...product, amount}))
+                alert('product add in cart...')
+            break
+            default:
+                alert('product already exist in cart...')
+            break
+        }      
     }
+
+    console.log(cartContext)
 
     const productsRender = () =>{
         return products.map((coffee)=>{
@@ -28,7 +41,7 @@ const Home = ()=>{
                     price = {coffee.price}
                     type = {coffee.type}
                     image ={coffee.image}
-                    handleClick={handleClick}
+                    handleClick={handleAddItemInCart}
                 />
             )
         })
